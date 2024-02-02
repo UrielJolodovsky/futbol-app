@@ -1,7 +1,7 @@
 import MatchesTable from "@/components/MatchesTable";
 
 
-export default async function Home() {
+export default function Home() {
 
   return (
       <MatchesTable />

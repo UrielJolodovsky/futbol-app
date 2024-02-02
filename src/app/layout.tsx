@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-black min-h-screen'>
-        <header className="text-xl font-semibold leading-8">Fútbol App</header>
+        <header className="text-white flex justify-between items-center p-2">
+          <Link className="text-xl font-semibold leading-8" href='/'>Fútbol App</Link>
+          <nav>
+            <ul className="flex gap-4 text-white/60">
+              <li className="hover:text-white/85">
+                <Link href='/'>Partidos</Link>
+              </li>
+              <li className="hover:text-white/85">
+                <Link href='/jugadores'>Jugadores</Link>
+              </li>
+              <li className="hover:text-white/85">
+                <Link href='/armador'>Armador de equipos</Link>
+              </li>
+            </ul>
+          </nav>
+          </header>
         <main className="py-8">
           {children}
         </main>
